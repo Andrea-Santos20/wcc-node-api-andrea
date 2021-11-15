@@ -1,0 +1,21 @@
+{
+  "name": "wcc-node-api-andrea",
+  "version": "1.0.0",
+  "description": "Trilha Dasa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrea-Santos20/wcc-node-api-andrea.git"
+  },
+  "keywords": [],
+  "author": "andrea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrea-Santos20/wcc-node-api-andrea/issues"
+  },
+  "homepage": "https://github.com/Andrea-Santos20/wcc-node-api-andrea#readme"
+}

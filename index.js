@@ -10,12 +10,11 @@ app.get("/segunda-req", function(req, res){
     res.send("Minha Segunda requisição");
 });
 
-app.get("/com-parametros", function(req,res) {
-    res.send("Com parametros funciona! Sabadou" + req.query.nome);
-}); 
+app.get("/com-parametros", function(req, res) {
+    res.send("Com parametros funciona! Sabadou " + req.query.nome);
+});
 
 app.listen(port, function(){
     console.log("ouvindo a porta: ", port);
-
 });
 
