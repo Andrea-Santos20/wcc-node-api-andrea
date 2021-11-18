@@ -8,6 +8,9 @@ app.get("/", function(req, res) {
     res.send("Dasa Educa - Artigos");
 });
 
+const routes = require(".routers/artigos.routes");
+router(app);
+
 app.listen(port, function() {
     console.log("Ouvindo a porta: ", port);
 });
