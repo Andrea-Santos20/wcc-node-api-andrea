@@ -1,16 +1,16 @@
-const databaseConfig = requere("../config/db.config.js");
+const databaseConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");
 
 
-const sequelizeOptions = {dialect: databaseConfig.dialect };
-const sequelizeDatabase = new Sequelize(databaseConfig.conectionStringUrl, ) // pode receber parametros
+const sequelizeOptions = { dialect: databaseConfig.dialect };
+const sequelizeDatabase = new Sequelize(databaseConfig.connectionStringUrl, sequelizeOptions); // pode receber parametros
 
 const database = {
     Sequelize: Sequelize,
-    sequelizeDatabase: sequelizeDatabase
+    sequelizeDatabase: sequelizeDatabase,
 };
 
-const artigosModel = require("./artigos.model.js") (sequelizeDatabase, Sequelize) //vai procurar o arquivo na pasta
-database.artigos = artigosModell("./artigos.model.js") (sequelizeDatabase, Sequelize) //vai procurar o arquivo na pasta
+const artigosModel = require("./artigos.model.js")  //vai procurar o arquivo na pasta
+database.artigos = artigosModel(sequelizeDatabase, Sequelize); //vai procurar o arquivo na pasta
 
 module.exports = database;

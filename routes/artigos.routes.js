@@ -1,23 +1,14 @@
 // rotas do sistema de artigos
 
-/*
-    GET
-        - Obter todos os artigos
-        - Obter um artigo especifico
-        - Obter todos os artigos publicados
-    POST
-        - Criar um novo artigo
-    PUT
-        - Publicar meu artigo
-    DELETE
-        - Deletar um artigo
-*/
-
 module.exports = (app) => {
-    const artigosController = require("../controllrs/artigos.controller");
+    const artigosController = require("../controllers/artigos.controller");
     let router = require("express").Router();
 
-    router.post("/", artigosController.create)
+    router.post("/", artigosController.create);
 
-    app.use("artigos" , router)
-}
+    router.get("/", artigosController.findAll);
+
+    app.use("/artigos", router);
+};  
+
+    
